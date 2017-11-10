@@ -7,9 +7,9 @@ import { configTypewriter, configCV } from '../config/config-main';
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit, AfterViewInit {
-  protected customText: string;
+  public customText: string;
 
-  protected CVCode = '';
+  public CVCode = '';
 
   protected title = configCV.title;
 
