@@ -12,8 +12,8 @@ export class EyesComponent implements OnInit {
   constructor(private eye: DrowEyeService) { }
 
   ngOnInit() {
-    this.eye.draw('eye-left', 'pupil-left', 75, 133, 18);
-    this.eye.draw('eye-right', 'pupil-right', 119, 115, 18);
+    this.eye.draw('eye-left', 'pupil-left', 24, 16, 18, 'white');
+    this.eye.draw('eye-right', 'pupil-right', 78, -2, 18, 'white');
   }
 
   private getRandomInt(min, max) {

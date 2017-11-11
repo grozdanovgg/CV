@@ -1,19 +1,22 @@
 .navbar {
-    top: 0px;
-    right: 5px;
+    /* top: 0px;
+    right: 5px; */
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     flex-direction: row;
-    justify-content: flex-end;
-    margin-top:2rem;
-    margin-bottom: 0;
+    justify-content: space-between;
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav {
+    align-self: center;
   }
 
 .nav-button {    
 	background-color:white;
 	border-radius:10px;
 	border:1px solid gray;
-    
     text-decoration: none;
     text-align: center;
 	cursor:pointer;
@@ -30,3 +33,13 @@
 	position:relative;
 	top:1px;
 }
+
+@media  screen and (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+  }

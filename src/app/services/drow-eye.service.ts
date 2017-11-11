@@ -6,7 +6,7 @@ export class DrowEyeService {
 
   constructor() { }
 
-  draw(eyecontainer, pupil, eyeposx, eyeposy, eyer) {
+  draw(eyecontainer, pupil, eyeposx, eyeposy, eyer, color) {
     $('.monstereyes').append(`<div class="eyecontainer" id="${eyecontainer}"><div class="pupil" id="${pupil}"></div></div>`);
 
 
@@ -16,7 +16,7 @@ export class DrowEyeService {
     $(eyecontainerSelector).css({ left: eyeposx, top: eyeposy });
     $(eyecontainerSelector).css({ width: eyer, height: eyer });
     $(pupilSelector).css({ width: eyer * 0.4, height: eyer * 0.4 });
-    $(pupilSelector).css({ position: 'relative', background: 'white', 'border-radius': '50%' });
+    $(pupilSelector).css({ position: 'relative', background: color, 'border-radius': '50%' });
     $(eyecontainerSelector).css({ position: 'relative', overflow: 'hidden', 'border-radius': '50%' });
 
     // Initialise core variables
