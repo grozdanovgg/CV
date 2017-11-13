@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { DrowEyeService } from '../services/drow-eye.service';
 import { eyes } from '../config/config-main';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-eyes',

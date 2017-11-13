@@ -18,7 +18,6 @@ export class DrowEyeService {
     $(pupilSelector).css({ width: eyer * 0.4, height: eyer * 0.4 });
     $(pupilSelector).css({ position: 'relative', background: color, 'border-radius': '50%' });
     $(eyecontainerSelector).css({ position: 'relative', overflow: 'hidden', 'border-radius': '50%' });
-
     // Initialise core variables
     const r = $(pupilSelector).width() / 2;
     const center = {
@@ -34,11 +33,14 @@ export class DrowEyeService {
 
     // Listen for mouse movement
     $(window).mousemove(e => {
+      const parentPosition = $(eyecontainerSelector).parent().position();
+      const scroolX = document.scrollingElement.scrollLeft;
+      const scroolY = document.scrollingElement.scrollTop;
       const d = {
         // x: e.pageX,
         // y: e.pageY
-        x: e.pageX - r - elX - mouseX,
-        y: e.pageY - r - elY - mouseY
+        x: e.pageX - r - elX - mouseX - scroolX - parentPosition.left,
+        y: e.pageY - r - elY - mouseY - scroolY - parentPosition.top,
       };
 
       const distance = Math.sqrt(d.x * d.x + d.y * d.y);

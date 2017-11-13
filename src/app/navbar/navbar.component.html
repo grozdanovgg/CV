@@ -1,16 +1,18 @@
-<div class="navbar">
-  <div class="logo">
+<div class="navbar" [ngStyle]='navbarStyle'>
+  <!-- <div class="hint" [ngStyle]='hintStyle'>
+    <code>
+          <p>_you are being watched -></p>
+    </code>
+  </div> -->
+  <div class="logo" [ngStyle]='logoStyle'>
     <app-eyes></app-eyes>
   </div>
   <div class="nav">
-    <a href="https://github.com/grozdanovgg" target="_blank" class="nav-button">
-      <code>_github</code>
-    </a>
     <a href="https://telegram.me/grozdanovgg" target="_blank" class="nav-button">
       <code>_telegram</code>
     </a>
-    <a href="https://www.facebook.com/grozdanovgg" target="_blank" class="nav-button">
-      <code>_facebook</code>
+    <a href="https://github.com/grozdanovgg" target="_blank" class="nav-button">
+      <code>_github</code>
     </a>
   </div>
 </div>

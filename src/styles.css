@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@keyframes example {
+@keyframes bg-colors {
     /* to {background-color: #73bbff;}
     from {background-color: #000000;} */
     0%   {background-color: #73bbff;}
@@ -13,7 +13,7 @@
 }
 body{
     background-color: #73bbff;
-    animation-name: example;
+    animation-name: bg-colors;
     animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-delay: 3s;
