@@ -1,9 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 940px;
-  padding-top: 130px;
+  padding-top: 80px;
   margin:auto;
   text-align:center;
 }
@@ -39,7 +39,7 @@
   100%  {top:0px;}
 }
 
-@media screen and (min-width:500px) {
+@media screen and (min-width:600px) {
   .container {
     padding-top: 80px;
   }

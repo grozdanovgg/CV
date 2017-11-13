@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { environment } from './../../environments/environment.prod';
+import { Component, OnInit, HostListener } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -7,9 +8,12 @@ import * as $ from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+
   navbarStyle: {};
   // hintStyle: {};
   logoStyle: {};
+  windowWidth: number;
   private navbarScrollStyle = {
     'background-color': 'rgb(35, 36, 31)',
     'transition': 'background-color 1s'
@@ -18,17 +22,6 @@ export class NavbarComponent implements OnInit {
     'background-color': 'transparent',
     'transition': 'background-color 1s'
   };
-
-  // private hintScrollStyle = {
-  //   'color': 'white',
-  //   'transition': 'color 1s',
-  //   'display': 'block',
-  // };
-  // private hintDefaultStyle = {
-  //   'color': 'transparent',
-  //   'transition': 'display color 1s',
-  //   'display': 'none'
-  // };
 
   private logoScrollStyle = {
     'margin-left': '45%',
@@ -42,22 +35,19 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.moveLogo();
+  }
 
+  private moveLogo() {
     $(window).scroll(ev => {
       const scrollTop = document.scrollingElement.scrollTop;
-
-      if (scrollTop > 50) {
+      if (scrollTop > 0) {
         this.navbarStyle = this.navbarScrollStyle;
-        // this.hintStyle = this.hintScrollStyle;
         this.logoStyle = this.logoScrollStyle;
       } else {
         this.navbarStyle = this.navbarDefaultStyle;
-        // this.hintStyle = this.hintDefaultStyle;
         this.logoStyle = this.logoDefaultStyle;
-
       }
-      // console.log(document.scrollingElement.scrollTop);
-      // console.log(this.scollTop);
     });
   }
 }

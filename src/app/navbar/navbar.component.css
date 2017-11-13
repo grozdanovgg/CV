@@ -14,15 +14,14 @@
 
 .nav {
 
-    margin-top: 25px;
+    margin-top: 15px;
+    margin-bottom: 25px;
     align-self: center;
 }
 
-/* .hint {
+.logo {
     display: none;
-    margin-left: 10px;
-    color: transparent;
-} */
+}
 
 .nav-button {    
 	background-color:white;
@@ -44,17 +43,18 @@
 	position:relative;
 	top:1px;
 }
-
-
-@media screen and (min-width: 500px){
+@media screen and (min-width: 600px){
     .navbar {
+        position: fixed;
         flex-direction: row;   
     }
-
     .nav {
         margin-top: auto;
         margin-bottom: auto;
         margin-right: 10px;
+    }
+    .logo {
+        display: block;
     }
 }
 
