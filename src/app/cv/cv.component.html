@@ -7,8 +7,14 @@
       </code>
     </div>
   </div>
-
-  <div class="body">
+  <div class="ie" *ngIf="ie">
+    <h2>
+      <code>
+       To view the content of this site, please use adequate browser (Edge, Chrome, Firefox or Opera)
+      </code>
+    </h2>
+  </div>
+  <div class="body" *ngIf="!ie">
     <pre>
       <code class="cv-code" highlight [code]="CVCode"></code>
     </pre>

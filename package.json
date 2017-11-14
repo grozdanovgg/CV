@@ -35,6 +35,8 @@
     "ngx-highlightjs": "^1.2.1",
     "path": "^0.12.7",
     "rxjs": "^5.4.2",
+    "scrollingelement": "^1.5.2",
+    "whatwg-fetch": "^2.0.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

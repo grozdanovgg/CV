@@ -34,13 +34,15 @@ export class DrowEyeService {
     // Listen for mouse movement
     $(window).mousemove(e => {
       const parentPosition = $(eyecontainerSelector).parent().position();
-      const scroolX = document.scrollingElement.scrollLeft;
-      const scroolY = document.scrollingElement.scrollTop;
+
+      const scrollX = document.scrollingElement.scrollLeft;
+      const scrollY = document.scrollingElement.scrollTop;
+
       const d = {
         // x: e.pageX,
         // y: e.pageY
-        x: e.pageX - r - elX - mouseX - scroolX - parentPosition.left,
-        y: e.pageY - r - elY - mouseY - scroolY - parentPosition.top,
+        x: e.pageX - r - elX - mouseX - scrollX - parentPosition.left,
+        y: e.pageY - r - elY - mouseY - scrollY - parentPosition.top,
       };
 
       const distance = Math.sqrt(d.x * d.x + d.y * d.y);

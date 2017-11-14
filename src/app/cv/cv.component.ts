@@ -1,3 +1,4 @@
+import { DetectBrowserService } from './../services/detect-browser.service';
 import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { configTypewriter, configCV } from '../config/config-main';
 
@@ -7,20 +8,23 @@ import { configTypewriter, configCV } from '../config/config-main';
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit, AfterViewInit {
+  ie: boolean;
   public customText: string;
 
   public CVCode = '';
 
   protected title = configCV.title;
 
-  constructor() {
+  // tslint:disable-next-line:whitespace
+  constructor(private detectBrowserService: DetectBrowserService) {
   }
 
   ngOnInit() {
+    this.ie = this.detectBrowserService.ie();
     this.typeWriter(configTypewriter.text, configTypewriter.speed);
   }
   ngAfterViewInit(): void {
-    fetch('../../assets/testClass.text')
+    fetch('../../assets/testClass.txt')
       .then(file => file.text())
       .then(responce => this.CVCode = responce);
   }

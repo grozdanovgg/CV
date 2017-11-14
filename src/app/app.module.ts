@@ -1,3 +1,4 @@
+import { DetectBrowserService } from './services/detect-browser.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -24,7 +25,7 @@ const options: HighlightOptions = {
     BrowserModule,
     HighlightModule.forRoot(options)
   ],
-  providers: [DrowEyeService],
+  providers: [DrowEyeService, DetectBrowserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
