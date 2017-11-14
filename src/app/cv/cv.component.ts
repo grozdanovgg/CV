@@ -9,6 +9,9 @@ import { configTypewriter, configCV } from '../config/config-main';
 })
 export class CvComponent implements OnInit, AfterViewInit {
   ie: boolean;
+  safari: boolean;
+
+  iOS: boolean;
   public customText: string;
 
   public CVCode = '';
@@ -21,6 +24,8 @@ export class CvComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.ie = this.detectBrowserService.ie();
+    this.safari = this.detectBrowserService.safari();
+    this.iOS = this.detectBrowserService.iOS();
     this.typeWriter(configTypewriter.text, configTypewriter.speed);
   }
   ngAfterViewInit(): void {

@@ -7,10 +7,10 @@
       </code>
     </div>
   </div>
-  <div class="ie" *ngIf="ie">
+  <div class="ie" *ngIf="(ie || safari )&& !iOS">
     <h2>
       <code>
-       To view the content of this site, please use adequate browser (Edge, Chrome, Firefox or Opera)
+       To view the content of this site, please use one of the folowing browser: Edge, Chrome, Firefox or Opera
       </code>
     </h2>
   </div>
