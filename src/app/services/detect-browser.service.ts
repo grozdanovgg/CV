@@ -7,15 +7,13 @@ export class DetectBrowserService {
 
   constructor() { }
   ie() {
-    const msie = this.ua.indexOf('MSIE ');
+    const msie = this.ua.indexOf('MSIE');
     if (msie > 0) {
       // IE 10 or older
       return true;
     }
-
-    const trident = this.ua.indexOf('Trident/');
     // tslint:disable-next-line:max-line-length
-    if (this.ua === 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko') {
+    if (this.ua.match(/Trident\/7\./)) {
       // IE 11
       return true;
     }
