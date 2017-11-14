@@ -13,7 +13,6 @@
 }
 
 .nav {
-
     margin-top: 15px;
     margin-bottom: 25px;
     align-self: center;
@@ -36,14 +35,12 @@
 	text-shadow:0px 1px 0px gray;
 }
 .nav-button:hover {
-    background-color:gray;
-    color: black
+    background-color:#23241f;
+    color: white;
 }
-.nav-button:active {
-	position:relative;
-	top:1px;
-}
-@media screen and (min-width: 600px){
+
+
+@media screen and (min-width: 850px){
     .navbar {
         position: fixed;
         flex-direction: row;   
